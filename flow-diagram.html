@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genealogy Project Flow Diagram</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1, h2 { color: #2c3e50; }
+        .diagram { margin: 30px 0; }
+        .box { border: 2px solid #3498db; border-radius: 8px; padding: 16px; margin: 8px; background: #ecf0f1; display: inline-block; min-width: 120px; text-align: center; }
+        .arrow { font-size: 32px; color: #34495e; margin: 0 16px; vertical-align: middle; }
+        .row { display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
+    </style>
+</head>
+<body>
+    <h1>Genealogy Project Flow Diagram</h1>
+    <h2>Frontend (Next.js)</h2>
+    <div class="diagram">
+        <div class="row">
+            <div class="box">User</div>
+            <span class="arrow">→</span>
+            <div class="box">Next.js Pages<br>(UI Components)</div>
+            <span class="arrow">→</span>
+            <div class="box">API Calls<br>(fetch/axios)</div>
+        </div>
+        <div class="row">
+            <div class="box">State Management<br>(Redux/Context)</div>
+        </div>
+    </div>
+    <h2>Backend (Node.js + MongoDB)</h2>
+    <div class="diagram">
+        <div class="row">
+            <div class="box">API Endpoint<br>(Express.js)</div>
+            <span class="arrow">→</span>
+            <div class="box">Business Logic<br>(Controllers/Services)</div>
+            <span class="arrow">→</span>
+            <div class="box">MongoDB<br>(Database)</div>
+        </div>
+        <div class="row">
+            <div class="box">Authentication<br>(JWT/Passport)</div>
+        </div>
+    </div>
+    <h2>End-to-End Flow</h2>
+    <div class="diagram">
+        <div class="row">
+            <div class="box">User</div>
+            <span class="arrow">→</span>
+            <div class="box">Next.js Frontend</div>
+            <span class="arrow">→</span>
+            <div class="box">Node.js API</div>
+            <span class="arrow">→</span>
+            <div class="box">MongoDB</div>
+        </div>
+    </div>
+    <p>This flow diagram illustrates how the user interacts with the Next.js frontend, which communicates with the Node.js backend via API calls. The backend processes requests, applies business logic, handles authentication, and interacts with MongoDB to store and retrieve genealogy data.</p>
+</body>
+</html>

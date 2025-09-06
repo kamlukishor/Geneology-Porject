@@ -1,4 +1,9 @@
-function Header() {
+interface HeaderProps {
+    onRegisterClick?: () => void;
+    onLoginClick?: () => void;
+}
+
+function Header({ onRegisterClick, onLoginClick }: HeaderProps) {
     return (
         <>
             <nav className="navbar navbar-expand-lg" style={{ padding: "50px" }}>
@@ -41,8 +46,8 @@ function Header() {
                         </form>
 
                         <div className="d-flex">
-                            <a href="#" className="btn btn-outline-primary me-2">Register</a>
-                            <a href="#" className="btn btn-success">Login</a>
+                            <button type="button" className="btn btn-outline-primary me-2" onClick={onRegisterClick}>Register</button>
+                            <button type="button" className="btn btn-success" onClick={onLoginClick}>Login</button>
                         </div>
                     </div>
                 </div>
